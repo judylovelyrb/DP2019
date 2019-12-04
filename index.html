@@ -41,6 +41,57 @@
             .float_right{
                 float: right;
             }
+            footer{
+                    background-color: rgb(248, 209, 209);
+                    color: rgb(0, 0, 0);
+                    margin: 0px;
+                    width: 1700px;
+                    padding: 10px 50px;
+                }
+                footer>div>ul>li{
+                    float:left;
+                    list-style: none;
+                    padding: 0px 10px; /* 상하 좌우 */
+                    border-right: solid 2px gray;
+                }
+                footer>div>ul>li:nth-child(6){
+                    border: none;
+                }
+                footer>div>ul{
+                    padding:0px;
+                }
+                footer>ul>li{
+                    float: left;
+                    list-style: none;
+                    padding: 0px 10px; /*상하 좌우 */
+                }
+                footer>ul{
+                    padding:0px;
+                }
+                #footer_left{
+                    float: left;
+                }
+                #footer_right{
+                    float: right;
+                }
+                #wrap{
+                    /* width: 1200px; 고정값 */
+                    min-width: 1800px; /*최소넓이*/
+                    max-width: 2000px; /*최대넓이*/
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                body{
+                    margin: 0px;
+                }
+                nav>ul>li>a{
+                    text-decoration: none;
+                }
+                #content {
+                    text-align: center;
+                    color:rgb(0, 0, 0);
+                    font-size: 17px;
+                }
         </style>
         <title>콘텐츠 프로그래밍 사이트</title>
         <meta charset="utf-8" />
@@ -70,5 +121,28 @@
                 <source src="./media/교보문고 35주년 홍보영상.mp4" type="video/mp4" />
             </video>
         </center>
+        <footer>
+                <div id="footer_left">
+                <ul>
+                    <li>INDEX</li>
+                    <li>layout1</li>
+                    <li>layout2</li>
+                    <li>layout3</li>
+                    <li>kyobo</li>
+                    <div class="clear"></div> <!-- float left 해제-->
+                </ul>
+                <div id="copyright">ⓒ 2019 JUNGJIWOO. 콘텐츠 프로그래밍 기말고사 과제</div>
+                <div id="footer_right">
+                </div>
+            </div>
+            <ul id="footer_right"> <!-- 오른편 상자 역할-->
+                <li><img src="images/layout1_footer_icon1.png"></li>
+                <li><img src="images/layout1_footer_icon2.png"></li>
+                <li><img src="images/layout1_footer_icon3.png"></li>
+                <li><img src="images/layout1_footer_icon4.png"></li>
+                <div class="clear"></div> <!-- float left 해제-->
+            </ul>
+            <div class="clear"></div> <!-- float left 해제-->
+        </footer>
     </body>
 </html>
