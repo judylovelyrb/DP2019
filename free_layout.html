@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bookstore</title>
+        <meta charset="utf-8" />
+        <style>
+            header,div,nav,footer,ul,li,h1,h2,h3{
+                /* border: solid 1px black; /* 경계선 긋기 */
+                /* margin: 10px; /* 서로간에 여유공간 만들기 */
+            }
+            header{
+                padding: 10px 50px; /* 상하 좌우 */
+                background-color: rgb(180, 210, 255);
+            }
+            header>ul>li{
+                float:left; /*둥둥 떠다니게 : 왼쪽 기준으로 ( 너무 자주  쓰는건 비추 ) */
+                list-style:none; /* 목록-모습(동그라미) : 없음 */
+                padding-left: 0px; /* 내부여백 - 왼쪽 : 10px */
+                padding-right: 10px; /* 내부여백 - 오른쪽 : 10px * (바깥여백은 margin) */
+                /* 경계선: 실선 1px 두께 회색 */
+
+            }
+            header>ul>li:nth-child(5){
+                border: none; /*경계선 :없음 */  /* 클래스는 마침표로 시작 아이디를 가지고 있는건 #으로 시작 */
+            }
+            header>ul{
+                margin: 0px;
+            }
+            #zoom{     
+                margin: 0px;
+
+            }
+            header>h1{
+                margin: 0px;
+            }
+            .clear{
+                clear: both; /* 지우다: 양쪽 */
+                height: 0px; /* 높이: 0px */
+                overflow: hidden; /* 넘쳤을때 : 숨김 */
+            }
+            .float_left{
+                float: left;
+            }
+            .float_right{
+                float: right;
+            }
+            nav li{
+                float: left;
+                list-style: none;
+                padding-left: 10px;
+                padding-right: 10px;
+
+            }
+            nav>h2{
+                margin: 0px;
+            }
+            nav>ul{
+                margin: 8px;
+            }
+            nav{
+                background-color:rgb(253, 214, 214);
+                padding: 10px 50px;
+            }
+            #content>div:nth-child(1){
+                background-color:#ddd;
+                 }
+                
+                #content>div:nth-child(2){
+                background-color: #ddd;
+                }
+                #content>div:nth-child(3){
+                background-color:#ddd;
+                }
+                #content>div:nth-child(4){
+                background-color:#ddd;
+                }
+                .content_part{
+                    float:left;
+                    width: 480px;
+                    margin: 15px;
+                }
+                #content h3{
+                    color: rgb(0, 0, 0);
+                }
+                #content dt{
+                    font-weight: bold; /*글씨-두께: 두껍게*/
+                }
+                #content dd{
+
+                }
+                .content_part dd{
+                    margin:0px;
+                }
+                #content section{
+                    width: 1200px;
+                    margin-left: 0px; /* 고정값 */
+                    margin-left: auto; /* 가변값 */
+                    margin-right: auto;
+                    
+                    padding: 50px 0px; /* 상하 좌우 */
+                }
+                footer{
+                    background-color: rgb(248, 209, 209);
+                    color: rgb(0, 0, 0);
+                    margin: 0px;
+                    width: 1700px;
+                    padding: 10px 50px;
+                }
+                footer>div>ul>li{
+                    float:left;
+                    list-style: none;
+                    padding: 0px 10px; /* 상하 좌우 */
+                    border-right: solid 2px gray;
+                }
+                footer>div>ul>li:nth-child(6){
+                    border: none;
+                }
+                footer>div>ul{
+                    padding:0px;
+                }
+                footer>ul>li{
+                    float: left;
+                    list-style: none;
+                    padding: 0px 10px; /*상하 좌우 */
+                }
+                footer>ul{
+                    padding:0px;
+                }
+                #footer_left{
+                    float: left;
+                }
+                #footer_right{
+                    float: right;
+                }
+                #wrap{
+                    /* width: 1200px; 고정값 */
+                    min-width: 1800px; /*최소넓이*/
+                    max-width: 2000px; /*최대넓이*/
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                body{
+                    margin: 0px;
+                }
+                nav>ul>li>a{
+                    text-decoration: none;
+                }
+                #content {
+                    text-align: center;
+                    color:rgb(0, 0, 0);
+                    font-size: 17px;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+                <header>
+                        <h1 class="float_left">
+                                <img src="images/cloud.png" />
+                            </h1>
+                        <ul class="float_right">
+                            <li><a href="index.html">INDEX</a></li>
+                            <li><a href="layout1.html">layout01</a></li>
+                            <li><a href="layout2.html">layout02</a></li>
+                            <li><a href="layout3.html">layout03</a></li>
+                            <li><a href="free_layout.html">교보문고</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                        <div class="clear"></div>
+                    </header>
+                <!-- gunug@naver.com-->
+                <div id="zoom" class="float_right">
+                </div>
+                <div class="clear"></div> <!-- float left 해제-->
+            </header>
+            <nav>
+                <h2 class="float_left">
+                    <img src="images/교보.png" /></h2>
+                <ul class="float_right">
+                        <li><a href="#sec1">추리</a></li>
+                        <li><a href="#sec2">시</a></li>
+                        <li><a href="#sec3">인기소설</a></li>
+                        <li><a href="#sec4">비타민</a></li>
+                        <li><a href="#sec5">화제의 신간</a></li>
+                        <li><a href="#sec6">홍보 영상</a></li>
+                    <div class="clear"></div> <!-- cloat left 해제-->
+                </ul>
+                <div class="clear"></div>
+            </nav>
+            <div id="content">
+                <div>
+                    <section id="sec1">
+                    <section>
+                        <!-- 파란박스 부분 -->
+                        <h3> 추리 사건에 관심이 많은 분</h3>
+                        <div class="content_part">
+                            <!-- 왼편 부분 -->
+                            <img src="images/책1.jpg" />
+                            <dl>
+                                <dt>나미야 잡화점의 기적</dt>
+                                <dd>
+                                    <p>30여 년간 비어 있던 오래된 가게인 나미야 잡화점.
+                                    어느 날 그곳에 경찰의 눈을 피해 달아나던 삼인조 도둑이 숨어든다.</p>
+                                    <p>난데없이 ‘나미야 잡화점 주인’ 앞으로 의문의 편지 한 통이 도착하고,
+                                    세 사람은 얼떨결에 편지를 열어본다.
+                                    처음에는 장난이라고 생각하던 세 사람은 어느새 편지 내용에 이끌려 답장을 해주기 시작하는데….</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <!-- 오른편 부분 -->
+                            <img src="images/책2.jpg" />
+                            <dl>
+                                <dt>동급생</dt>
+                                <dd>
+                                    <p>야구부 주장 니시하라 소이치는 자신과 관계가 있던 유키코의 사고에 책임을 느껴 미사키 선생을 규탄하기로 한다.
+                                    다른 학생들도 가세해서 항의 운동이 일파만파로 커지던 어느 날,
+                                    미사키 선생이 교실에서 시체로 발견된다.</p>
+                                    <p>때마침 알리바이가 없고 미사키 선생을 증오한다고 알려진 니시하라 소이치가 유력 용의자로 몰린다.
+                                    순식간에 전교생이 자신을 의심하게 된 상황에 놓인 니시하라는 독자적으로 범인을 찾아 나서는데…….</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                </div>
+                <div>
+                    <section id="sec2">
+                    <section>
+                        <!-- 파란박스 부분 -->
+                        <h3> 감성적인 시를 좋아하시는 분</h3>
+                        <div class="content_part">
+                            <!-- 왼편 부분 -->
+                            <img src="images/책3.jpg" />
+                            <dl>
+                                <dt>어떤 사랑도 기록하지 말기를</dt>
+                                <dd>
+                                    <p>“이 맑고도 끈끈한 부정의 얼룩들” 
+                                    기록할 수 없는 이야기들로 어둠을 나누는 시간</p>
+                                    <p>올해로 등단 19년을 맞은 이영주 시인의 네번째 시집 『어떤 사랑도 기록하지 말기를』이 문학과지성 시인선 532번으로 출간되었다.
+                                    『차가운 사탕들』 이후 5년 만에 펴내는 새 시집이다. “그로테스크한 이미지의 유희와 우화적 상상력”(문학평론가 김용희)이 돋보이는 시,</p> 
+                                    <p>“아름답게 악행을 퍼트”리며 “아름다워지는 것보다 훨씬 더 찬란한 착란의 시간”(시인 김소연)을 펼쳐놓는 시를 통해
+                                    이영주는 “자신이 쓰고 있는 시구가 곧바로 자신의 몸으로 체험되는”(문학평론가 황현산) 언어적 상상력을 유감없이 보여주었다.</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <!-- 오른편 부분 -->
+                            <img src="images/책4.jpg" />
+                            <dl>
+                                <dt>오래 속삭여도 좋을 이야기</dt>
+                                <dd>
+                                    <p>“떠다니는 문장들은 다 어디로 가서 죽을까”</p> 
+                                    <p>당신이 건네준 문장,</p> 
+                                    <p>그 문장과 문장 사이를 진동했던 내 시간의 흔적, 그것은</p>
+                                    <p>『오래 속삭여도 좋을 이야기』</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                </div>
+                <div>
+                    <section>
+                        <section id="sec3">
+                        <!-- 파란박스 부분 -->
+                        <h3> 주류 인기 소설을 좋아하시는 분</h3>
+                        <div class="content_part">
+                            <!-- 왼편 부분 -->
+                            <img src="images/책5.jpg" />
+                            <dl>
+                                <dt>내게 무해한 사람</dt>
+                                <dd>
+                                    <p>우리 모두가 지나온, 한 번은 어설프고 위태로웠던 그 시절의 이야기들!</p>
+
+                                    <p>《쇼코의 미소》 이후 2년 만에 펴내는 최은영의 두 번째 소설집 『내게 무해한 사람』.
+                                    2년 동안 한 계절도 쉬지 않고 꾸준히 소설을 발표하며 자신을 향한 기대와 우려 섞인 시선에 소설로써 응답해 온 저자가
+                                    일곱 편의 중단편소설을 다시 처음부터 끝까지 꼼꼼히 매만지며 퇴고해 엮어낸 소설집이다.></p>                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <!-- 오른편 부분 -->
+                            <img src="images/책6.jpg" />
+                            <dl>
+                                <dt>피프티 피플</dt>
+                                <dd>
+                                    <p>우리를 닮은 50명의 주인공이 들려주는 삶의 슬픔과 감동!</p>
+
+                                    <p>정세랑의 장편소설 『피프티 피플』.
+                                    2016년 1월부터 5월까지 창비 블로그에서 연재되었던 작품으로 수도권의 한 대학병원을 중심으로 느슨하게,
+                                    또는 단단하게 연결된 50명의 이야기를 담고 있다.</p>
+                                    <p>50개의 장으로 구성된 소설 속에서 병원 안팎의 한 사람 한 사람이 처한 곤경과 갑작스럽게 겪게 되는 사고들,
+                                    그들이 안고 있는 고민들이 흥미진진하면서도 감동적으로 펼쳐진다.</p>                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                </div>
+                <div>
+                    <section>
+                        <section id="sec4">
+                        <!-- 파란박스 부분 -->
+                        <h3> 힘들고 지친 나에게 한마디</h3>
+                        <div class="content_part">
+                            <!-- 왼편 부분 -->
+                            <img src="images/책7.jpg" />
+                            <dl>
+                                <dt>어쩌면 내가 가장 듣고 싶었던 말</dt>
+                                <dd>
+                                    <p>견딜 수 없는 시간을 견디게 해준 애틋하고 빛나는 말들.</p>
+                                    <p>『어쩌면 내가 가장 듣고 싶었던 말』에는 그 애틋하고 빛나는 말들이 담겨있다.
+                                        괜찮은 척, 아무렇지 않은 척해 보지만, 우리는 누군가 자신의 이름을 불러 주기를,
+                                        참으로 애썼다고 진심 어린 칭찬의 말을 건네주길 간절히 원한다.</p>
+                                    <p>저자도 그런 시간을 겪어 봤기에, 스스로에게 응원의 말을 건네며 그 시절을 건너 왔기에,
+                                        비슷한 외로움을 겪는 이들에게 따뜻한 위로를 보낸다. </p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <!-- 오른편 부분 -->
+                            <img src="images/책8.jpg" />
+                            <dl>
+                                <dt>곰돌이 푸, 서두르지 않아도 괜찮아</dt>
+                                <dd>
+                                    <p>디즈니의 사랑스러운 푸가 전하는 삶의 여유!</p>
+                                    <p>서점가의 캐릭터 열풍의 중심에 선 《곰돌이 푸, 행복한 일은 매일 있어》의 두 번째 이야기인 이번 책에서는 인생의 위기들을 여유 있게 웃어넘기는 푸의 모습을 만나볼 수 있다.</p>
+                                    <p>어른이 될수록 나답지 않은 선택을 하는 일이 많아지고 옳고 그름,
+                                    원하는 것과 원하지 않는 것의 경계 속에서 애매한 선택을 하며 힘든 시간을 보내기도 하는 우리에게 잠시 걸음을 늦추고 각자의 마음을 들여다볼 수 있게 해주는,
+                                    귀엽고 사랑스러운 모습부터 엉뚱한 모습까지 우리를 자꾸만 웃음 짓게 만드는 푸의 다양한 모습을 만나보는 즐거움을 느낄 수 있다.</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                </div>
+            </div>
+            <div id="content">
+                    <div>
+                        <section id="sec5">
+                            <!-- 파란박스 부분 -->
+                            <h1>화제의 신간</h1>
+                            <h4>최근에 나온 작품 중 많은 관심을 받고 있는 책이에요.</h4>
+                            <div class="content_part">
+                                <!-- 왼편 부분 -->
+                                <img src="images/신간1.jpg" />
+                                <dl>
+                                        <dt>오늘 밤은 사라지지 말아요</dt>
+                                        <dd>
+                                            <p>오늘 밤이 지나면 사라져버릴지라도 지금은 분명히 존재하는 어떤 기미와 흔적을 언어로 붙잡다!</p>
+                                            <p>저자가 선보이는 이야기 속 주인공들은 모두 평범한 일상을 사는 이들이다.
+                                                혼자든 둘이든 어느 골목에서 맞닥뜨렸을지 모르는 우리 주위의 사람들.
+                                                저자는 놓치는 줄도 모른 채 상처를 들여다볼 새도 없이 현실을 살아가는 여리디여린 이들의 마음의 지도를 그린다.</p>
+                                            <p>특유의 색감과 이야기가 있는 그림으로 사랑받는 일러스트레이터 주정아 작가의 상상력을 자극하는 이야기가 살아 있는 그림을 담아 보는 즐거움을 더하고,
+                                                그림 자체로 책의 매력을 극대화한다. </p>
+                                        </dd>
+                                    </dl>
+                            </div>
+                            <div class="content_part">
+                                <!-- 오른편 부분 -->
+                                <img src="images/신간2.jpg" />
+                                <dl>
+                                    <dt>오늘도 펭수 내일도 펭수</dt>
+                                    <dd>
+                                        <p>신이나! 신이나! 다이어리 신이나!</p>
+                                        <p>‘난 너의 평생 친구 자이언트 펭수!'
+                                            100만 선배님들의 마음을 사로잡은 거대 펭귄 ‘자이언트 펭수’의 이야기가 담긴 에세이 다이어리 『오늘도 펭수 내일도 펭수』.</p>
+                                        <p>한번 보면 폭 빠져버리는 사랑스럽고 귀여운 펭수의 모습은 물론, 선배님들의 마음을 감동시킨 따뜻한 멘트와 듣자마자 중독되는 펭수의 놀라운 자작곡까지 담아냈다.
+                                            책꽂이에 꽂아두지 않고 매일 펼쳐볼 수 있도록 실용적인 디자인도 첨가하여 독자들의 만족도를 높였다.</p>
+                                            <p>또한 한 장 한 장 넘길 때마다 다양한 표정의 펭수가 등장해 읽는 이에게 즐거움을 선사하니, 펭수에게 이미 펭며든 사람이라면, 반드시 평생 소장할 것을 강력 추천한다. </p>
+                                    </dd>
+                            </dl>   
+                            </div>
+                            <div class="clear"></div>
+                        </section>
+                    </div>
+                    <div id="content">
+                        <div>
+                            <section id="sec6">
+                                <h1>홍보 영상</h1>
+                                <video width="800px" height:="460px" controls>
+                                        <source src="./media/교보문고 35주년 홍보영상.mp4" type="video/mp4" />
+                                    </video>
+                                    <p>교보문고 35주년을 맞이해 나온 홍보 영상 입니다.</p>
+                            
+    </div>
+    </body><footer>
+                                    <div id="footer_left">
+                                    <ul>
+                                        <li>INDEX</li>
+                                        <li>layout1</li>
+                                        <li>layout2</li>
+                                        <li>layout3</li>
+                                        <li>kyobo</li>
+                                        <div class="clear"></div> <!-- float left 해제-->
+                                    </ul>
+                                    <div id="copyright">ⓒ 2019 JUNGJIWOO. 콘텐츠 프로그래밍 기말고사 과제</div>
+                                    <div id="footer_right">
+                                    </div>
+                                </div>
+                                <ul id="footer_right"> <!-- 오른편 상자 역할-->
+                                    <li><img src="images/layout1_footer_icon1.png"></li>
+                                    <li><img src="images/layout1_footer_icon2.png"></li>
+                                    <li><img src="images/layout1_footer_icon3.png"></li>
+                                    <li><img src="images/layout1_footer_icon4.png"></li>
+                                    <div class="clear"></div> <!-- float left 해제-->
+                                </ul>
+                                <div class="clear"></div> <!-- float left 해제-->
+                            </footer>
+</html>

@@ -1,26 +1,74 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <style>
+            header{
+                background-color:rgb(180, 210, 255);
+                color:black;
+            }
+            header{
+                padding: 10px 50px; /* 상하 좌우 */
+                background-color: rgb(180, 210, 255);
+            }
+            header>ul>li{
+                float:left; /*둥둥 떠다니게 : 왼쪽 기준으로 ( 너무 자주  쓰는건 비추 ) */
+                list-style:none; /* 목록-모습(동그라미) : 없음 */
+                padding-left: 0px; /* 내부여백 - 왼쪽 : 10px */
+                padding-right: 10px; /* 내부여백 - 오른쪽 : 10px * (바깥여백은 margin) */
+                /* 경계선: 실선 1px 두께 회색 */
+
+            }
+            header>ul>li:nth-child(5){
+                border: none; /*경계선 :없음 */  /* 클래스는 마침표로 시작 아이디를 가지고 있는건 #으로 시작 */
+            }
+            header>ul{
+                margin: 0px;
+            }
+            #zoom{     
+                margin: 0px;
+            }
+            header>h1{
+                margin: 0px;
+            }
+            .clear{
+                clear: both; /* 지우다: 양쪽 */
+                height: 0px; /* 높이: 0px */
+                overflow: hidden; /* 넘쳤을때 : 숨김 */
+            }
+            .float_left{
+                float: left;
+            }
+            .float_right{
+                float: right;
+            }
+        </style>
         <title>콘텐츠 프로그래밍 사이트</title>
         <meta charset="utf-8" />
         <!-- utf-8, euc-kr -->
-        <meta name-"auctor" content="정지우" />
-        <meta name-"keywords" content+"계원, 콘텐츠 프로그래밍, 디지털미디어" />
-    </head>
+    </head> 
     <body>
-        <a href="html_part1.html">돌아오기</a>
-        <a href="training.html">HTML연습</a>
-        <a href="html5.html">html5</a>
-        <a href="form.html">폼</a>
-        <a href="cheeze.html">중간고사</a>
+            <header>
+                    <h1 class="float_left">
+                            <img src="images/cloud.png" /> 
+                        </h1>
+                    <ul class="float_right">
+                        <li><a href="index.html">INDEX</a></li>
+                        <li><a href="layout1.html">layout01</a></li>
+                        <li><a href="layout2.html">layout02</a></li>
+                        <li><a href="layout3.html">layout03</a></li>
+                        <li><a href="free_layout.html">교보문고</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </header>
+    </body>
+    <body>
+        <img src="images/교보문구.png">
+        <center>
+        <h1>KYOBOBOOK</h1>
+        <video width="800px" height:="460px" controls>
+                <source src="./media/교보문고 35주년 홍보영상.mp4" type="video/mp4" />
+            </video>
+        </center>
     </body>
 </html>
-
-
-
-
-
-
-
-<a href="https://www.naver.com" target="_blank">네이버가기</a>
-<br />

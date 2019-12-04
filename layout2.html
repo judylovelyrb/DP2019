@@ -4,11 +4,69 @@
         <title>layout2</title>
         <meta charset="utf-8" />
         <style>
+            footer{
+                    background-color: rgb(248, 209, 209);
+                    color: rgb(0, 0, 0);
+                    margin: 0px;
+                    width: 1600px;
+                    padding: 10px 50px;
+                }
+                footer>div>ul>li{
+                    float:left;
+                    list-style: none;
+                    padding: 0px 10px; /* 상하 좌우 */
+                    border-right: solid 2px gray;
+                }
+                footer>div>ul>li:nth-child(6){
+                    border: none;
+                }
+                footer>div>ul{
+                    padding:0px;
+                }
+                footer>ul>li{
+                    float: left;
+                    list-style: none;
+                    padding: 0px 10px; /*상하 좌우 */
+                }
+                footer>ul{
+                    padding:0px;
+                }
+                #footer_left{
+                    float: left;
+                }
+                #footer_right{
+                    float: right;
+                }
             /* CSS 작성하는 곳 */
             body{
                 margin: 0px;
             }
-            header{
+            .header01{
+                background-color:rgb(180, 210, 255);
+                color:black;
+            }
+            .header01>ul>li{
+                float:left; /*둥둥 떠다니게 : 왼쪽 기준으로 ( 너무 자주  쓰는건 비추 ) */
+                list-style:none; /* 목록-모습(동그라미) : 없음 */
+                padding-left: 0px; /* 내부여백 - 왼쪽 : 10px */
+                padding-right: 10px; /* 내부여백 - 오른쪽 : 10px * (바깥여백은 margin) */
+                /* 경계선: 실선 1px 두께 회색 */
+
+            }
+            .header01>ul>li:nth-child(5){
+                border: none; /*경계선 :없음 */  /* 클래스는 마침표로 시작 아이디를 가지고 있는건 #으로 시작 */
+            }
+            .header01>ul{
+                margin: 0px;
+            }
+            #zoom{     
+                margin: 0px;
+
+            }
+            .header01>h1{
+                margin: 0px;
+            }
+            .header02{
                 background-color: #02918c;
                 color: white;
                 padding: 10px 50px; /* 상하 좌우 */
@@ -124,8 +182,24 @@
     </head>
     <body>
         <div id="wrap">
+                <header>
+                        <h1 class="float_left">
+                                <img src="images/cloud.png" />
+                            </h1>
+                        <header class="header01">
+                        <ul class="float_right">
+                            <li><a href="index.html">INDEX</a></li>
+                            <li><a href="layout1.html">layout01</a></li>
+                            <li><a href="layout2.html">layout02</a></li>
+                            <li><a href="layout3.html">layout03</a></li>
+                            <li><a href="free_layout.html">교보문고</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                        <div class="clear"></div>
+                    </header>
+            <header>
             <header> 
-                <h1 class="float_left">
+                <h1 class="header02">
                     <!-- div span -->
                     <span>MY</span><span>POLIO</span>
                 </h1>
@@ -226,5 +300,29 @@
                 </ul>
             </section>
         </div>
+        <footer>
+                <h1 class="footer02"></h1>
+                <div id="footer_left">
+                <ul>
+                    <li>INDEX</li>
+                    <li>layout1</li>
+                    <li>layout2</li>
+                    <li>layout3</li>
+                    <li>kyobo</li>
+                    <div class="clear"></div> <!-- float left 해제-->
+                </ul>
+                <div id="copyright">ⓒ 2019 JUNGJIWOO. 콘텐츠 프로그래밍 기말고사 과제</div>
+                <div id="footer_right">
+                </div>
+            </div>
+            <ul id="footer_right"> <!-- 오른편 상자 역할-->
+                <li><img src="images/layout1_footer_icon1.png"></li>
+                <li><img src="images/layout1_footer_icon2.png"></li>
+                <li><img src="images/layout1_footer_icon3.png"></li>
+                <li><img src="images/layout1_footer_icon4.png"></li>
+                <div class="clear"></div> <!-- float left 해제-->
+            </ul>
+            <div class="clear"></div> <!-- float left 해제-->
+        </footer>
     </body>
 </html>
